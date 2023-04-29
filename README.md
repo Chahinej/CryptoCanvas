@@ -1,8 +1,8 @@
 # Steganography Report Readme
 
-# Steganography
+This repository contains a report on Steganography, a technique used to hide secret messages within images. The report covers the following topics:
 
-## Table of Contents
+# Table of Contents
 1. Introduction
    1.1 What is Steganography?
    1.2 Process
