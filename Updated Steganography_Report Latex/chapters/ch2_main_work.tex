@@ -562,8 +562,140 @@ Because of its simplicity, the LSB approach is commonly employed, although it ha
 \section{ PVD Criticism }
 PVD has advantages such as increased data hiding capacity and less aesthetic distortion to the cover image, as well as being compression resistant. It does, however, have drawbacks such as high computer resource requirements and sensitivity to noise and signal changes. Furthermore, due to specific requirements for colour space and image size, the PVD method may not be appropriate for some types of cover images or applications.
 
+\chapter{SSIS UML Design}
+\section{Use case diagram}
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=35em, height=137mm]{figures/UML Design/Use Case Diagram.png}}
+\caption{SSIS Use Case Diagram.}
+\end{figure}
+\section{Sequence diagram}
+\vskip2em
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=35em, height=160mm]{figures/UML Design/Sequence Diagram.png}}
+\caption{SSIS Sequence Diagram.}
+\end{figure}
+\vskip10em
+\section{Activity diagram}
+\vskip2em
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=35em, height=160mm]{figures/UML Design/Activity Diagram.png}}
+\caption{SSIS Activity Diagram.}
+\end{figure}
+\vskip8em
+\section{Class diagram}
+\vskip2em
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=35em, height=160mm]{figures/UML Design/Class Diagram.png}}
+\caption{SSIS Class Diagram.}
+\end{figure}
 
 
+\chapter{SSIS Requirements Analysis}
+\section{Functional requirements}
+\subsection{Cover image selection and processing}
+The SSIS system should allow the user to choose a suitable cover image, process it to ensure that it can be used for steganography, and ensure that it has enough area to embed the hidden message.
+\subsection{Secret message encoding and encryption}
+To ensure confidentiality, the system should encode the secret message in a way that it can be readily inserted into the cover image and then encrypt it using a safe algorithm.
+\subsection{Embedding algorithm and SSIS application}
+The SSIS system should have a strong embedding algorithm capable of inserting the encrypted message within the cover image without significantly modifying it.
+\subsection{Extraction algorithm and SSIS application}
+The system should have a trustworthy extraction algorithm capable of extracting the secret message from the stego-image.
+\subsection{Decryption and decoding of the secret message}
+The system should include a safe decryption algorithm capable of decrypting the encrypted message and revealing the original secret message.
+\vskip6em
+\section{Non-functional requirements}
+\subsection{Performance}
+The system should efficiently complete the embedding and extraction processes without generating substantial delays or compromising the quality of the cover image.
+\vskip1em
+\subsection{Security}
+The system should ensure that unauthorised users cannot discover the embedded message and that the decrypted message stays confidential.
+\vskip1em
+\subsection{Scalability}
+The system should be scalable and capable of handling a high volume of cover photos and texts.
+\vskip1em
+\subsection{User-friendliness}
+The system should be simple to operate and come with detailed instructions.
+
+\section{Key Takeaways}
+\textbf{In conclusion, The SSIS system should provide a dependable and secure means of inserting hidden messages into cover images while maintaining confidentiality and authenticity.}
+
+\chapter{SSIS High-Level Design}
+\section{Architecture overview}
+The SSIS system consists of five main components: Cover image selection and processing, Secret message encoding and encryption, Embedding algorithm and SSIS application, Extraction algorithm and SSIS application, and Decryption and decoding of the secret message.
+\section{Cover image selection and processing}
+The Cover Image Selection and Processing component of the SSIS system is responsible for selecting an appropriate cover image and processing it to ensure that it is suitable for embedding the secret message. The component may involve selecting an image with specific characteristics such as high resolution, minimal texture, or specific color combinations that can be used for steganography.
+
+For example, in the SSIS system, the cover image may be selected based on the resolution and aspect ratio of the image. The image may be processed to ensure that it has enough space to embed the secret message and is in a suitable format for steganography.
+\vskip6em
+\section{Secret message encoding and encryption}
+The SSIS system's Secret Message Encoding and Encryption component is in charge of encoding the secret message so that it may be easily incorporated into the cover image and encrypting it with a safe algorithm to assure confidentiality.
+
+In the SSIS system, for example, the secret message might be encoded using a binary code that can easily be integrated into the cover image without materially affecting the image. To maintain confidentiality, the message can then be encrypted using a secure technique such as AES.
+
+\section{Embedding algorithm}
+The SSIS system's Embedding technique and SSIS Application component is in charge of embedding the encrypted message into the cover image using a robust technique. The component must ensure that the message is integrated in such a way that unauthorised users cannot discover it and that it does not significantly affect the cover image.
+
+In the SSIS system, for example, the message may be embedded using a Least Significant Bit (LSB) technique, which substitutes the least significant bits of the cover picture pixels with the encrypted message bits. The SSIS application may also have extra features such as the ability to choose the embedding rate, which controls how much data can be buried in the image.
+
+\section{Extraction algorithm}
+The fourth SSIS system component is in charge of extracting the secret message from the stego-image. It employs a dependable extraction technique to find and extract the encoded message from the cover image while preserving the quality of the cover image.
+
+To allow users to quickly extract messages from stego-images, the SSIS programme must provide a user-friendly interface. The user can choose a stego-image and begin the extraction process, and the application will provide feedback on the extraction's progress.
+
+\section{Decryption and decoding of the secret message}
+The SSIS system's last component is in charge of decrypting and decoding the secret message derived from the stego-image. It decrypts the encrypted message using a secure decryption technique to get the original secret message.
+The SSIS programme must have an easy-to-use interface that allows users to simply decrypt and decode the secret message. The user can commence the decryption and decoding process by selecting an encrypted message, and the programme will provide feedback on the operation's progress.
+
+\section{Key takeaways}
+\textbf{The SSIS system architecture is flexible and scalable, ensuring quick secret message embedding and extraction. Its five components ensure confidentiality and authenticity by embedding hidden messages into cover images in a safe and secure manner. The system's components work in tandem to provide users with an easy-to-use and efficient solution for secret message communication. The system satisfies both functional and non-functional requirements, including performance, security, scalability, and usability.}
 
 
+\chapter{Exchanged Messages and Data}
+\section{Input data}
+The input data in the SSIS system consists of a cover image and a secret message that the user wishes to place into the cover image. The cover image should be in a steganography-compatible format, and the secret message should be in text or any other supported format that may be encoded and encrypted.
 
+Assume that the user wants to send a confidential message to a buddy via SSIS. They select a cover image, such as a sunset photograph, then type their message in a text file. The picture of the sunset and the text file containing the secret message would be the input data for SSIS.
+
+\section{Output data}
+The SSIS system's output data comprises of a stego-image and the decrypted message. The stego-image is the cover image that contains the secret message, and the decrypted message is the original secret message that the user intended to convey.
+
+In our example, after the user enters the cover image and secret message into SSIS, the system will generate a stego-image, which is the same picture of the sunset but with the secret message contained inside it. When the friend receives the stego-image, they can utilise SSIS to extract and decode the secret message, resulting in the original message the user intended to send.
+\vskip4em
+\section{Message/data flow between components}
+To enable the secure embedding, extraction, and decryption of the secret message, the SSIS system follows a precise message/data flow between its components.
+
+First, the cover image is chosen and processed to guarantee it is steganographically suitable. The secret message is then encrypted and encoded using a safe technique. The encrypted message is subsequently embedded within the cover image by the SSIS system using a robust embedding method, resulting in the stego-image.
+
+The stego-image is then put through the extraction algorithm, which extracts the secret message without modifying the cover image. Finally, the encrypted message is decoded using a secure decryption technique to yield the decrypted message.
+\vskip4em
+\section{Key takeaways}
+\textbf{The SSIS system protects the security and confidentiality of data and messages exchanged between its components. The system can effectively embed, extract, and decode the secret message while retaining the integrity of the cover image by following the message/data flow between components.}
+
+\chapter{Implementation details}
+\vskip3em
+\section{Programming language and libraries used}
+\vskip2em
+Any programming language with image processing and encryption libraries can be used to construct the SSIS system. Python, Java, and C++ are some of the most often used languages for building steganography systems.
+
+Python is an appropriate language for SSIS since it offers a significant variety of libraries for image processing and encryption, such as OpenCV and cryptography. OpenCV is a popular image-processing toolkit that can be used for cover image selection, processing, and stego-image synthesis. Cryptography is a library that includes symmetric and asymmetric encryption methods that can be used for secret message encoding and encryption.
+
+Pillow, a fork of the Python Imaging Library (PIL) that may be used for image processing and manipulation, and Stegano, a Python library for steganography that includes multiple embedding and extraction techniques, are two other libraries that can be used to build SSIS.
+\vskip12em
+\section{Sample code snippets}
+\vskip1em
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=37em, height=210mm]{figures/UML Design/Code snippet.png}}
+\caption{SSID Python code snippet.}
+\end{figure}
+
+\section{Limitations and challenges}
+The size of the secret message that can be placed in the cover image is restricted by the size of the cover image, which is one constraint of SSIS. Furthermore, if the cover image is compressed or altered, the encoded message may become corrupted or lost. Another issue is keeping the encoded message hidden from unauthorised users, as even minor alterations to the stego-image can reveal it.
+\vskip3em
+\section{Key Takeaways}
+\textbf{SSIS can be implemented using a variety of programming languages and libraries, and it consists of numerous processes, including cover picture selection and processing, secret message encoding and encryption, embedding and extraction methods, and secret message decryption and decoding. When using SSIS, there are some restrictions and problems to consider.
+SSIS offers a dependable and safe solution for inserting secret messages into cover images while maintaining secrecy and authenticity. The system is made up of multiple components that collaborate to pick and process the cover image, encode and encrypt the secret message, embed the message in the cover image, extract the message from the stego-image, and decrypt and decode the secret message.}
