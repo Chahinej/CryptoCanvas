@@ -172,8 +172,9 @@ The user enters the input cover image and the secret message to be hidden in thi
 \item Personal photographs, such as those of family members or pets.
 \item Images that are abstract, such as colourful patterns or textures.
 \end{itemize}
+\begin{center}
 {\color{red}\textbf{The cover image for steganography should be carefully chosen to avoid suspicion. The chosen image should not raise any suspicions or appear suspicious. Following the submission of the cover image and secret message, the secret message is encrypted using a cryptographic technique to maintain confidentiality.}}
-
+\end{center}
 \subsection{Secret Message Encryption}
 To guarantee confidentiality, the secret message provided by the user is encrypted in steganography. In the encryption process, a steganography key is utilised to generate a unique encryption pattern for each message. This key is a secret code known only to the sender and intended recipient, and it changes the arrangement of the message's bits, making deciphering difficult without it. Depending on the level of protection required and available processing power, many cryptographic methods can be used. Using a steganography algorithm, the encrypted message is subsequently inserted in the cover image.
 
@@ -196,10 +197,10 @@ The steganography key is used by the extraction module to decipher the embedded 
 
 \subsection{Displaying the secret message}
 The original message is displayed to the receiver when the extraction module decrypts the secret message using the steganography key. The recipient can then take appropriate actions based on its contents. Because the decrypted message may contain critical information, it must be kept discreet and safe. The completion of the final step indicates that the secret message was securely transferred to the recipient and was not intercepted. The eighth and last phase of an Image Steganography System is critical for the recipient to access and interpret the secret message and take necessary actions as a result of it.
-
+\begin{center}
 \subsection{Key Takeaways}
 To summarise, the functional flow of steganography entails hiding a hidden message beneath a cover image to form a stego-image. To guarantee confidentiality, the input cover image and secret message are encrypted, and a steganography algorithm is employed to embed the encrypted message into the cover image in an imperceptible manner. Using encryption techniques and password security, the stego-image can be securely transferred to the intended recipient, and the receiver can extract and decrypt the concealed message using the steganography key. The original communication is shown to the receiver, who must keep it private and secure. Understanding the functional flow of steganography is critical for employing it for covert communication.
-
+\end{center}
 \chapter{Main existing solutions}
 
 \section{ SSIS (Spread Spectrum Image Steganography) }
@@ -242,10 +243,10 @@ Spread Spectrum Image Steganography (SSIS) works by storing a message as Gaussia
 \item The use of SSIS can result in a slight degradation of the image quality, although this can be minimized through careful selection of the embedding parameters.
 \item SSIS can be vulnerable to attacks such as correlation and statistical analysis, which can be used to detect the presence of the embedded data.
 \end{itemize}
-
-\subsection{Conclusion}
+\begin{center}
+\section{Conclusion}
 {\color{black}\textbf{In conclusion, SSIS is an effective and adaptable method for embedding hidden messages in images via spread spectrum communication. It has a large number of uses in digital watermarking, copyright protection, and clandestine communication, as well as high capacity data concealment, resistance to attacks such cropping and rotation. To prevent picture degradation, SSIS must be used with care as it is susceptible to statistical attacks. SSIS is a useful instrument for safe communication and data protection in the modern world.}}
-
+\end{center}
 \vskip6em
 
 \section{BATCH steganography}
@@ -279,8 +280,10 @@ Batch steganography is a technique for hiding a secret message within multiple f
 \item The use of batch steganography may be detectable through statistical analysis, as the distribution of the data in the files may be altered by the embedding process.
 \end{itemize}
 \vskip3em
-\subsection{Conclusion}
+\begin{center}
+\section{Conclusion}
 \textbf{In summary, batch steganography is a powerful technique for hiding secret messages in multiple files simultaneously, providing high-capacity data hiding and increased robustness. However, the use of batch steganography can be time-consuming and resource-intensive, and it may result in a loss of data fidelity or detectability through statistical analysis.}
+\end{center}
 \vskip4.9em
 \section{PIT (Pixel Indicator Technique)}
 The Pixel Indicator Technique is a steganography technique used to conceal secret information in the least significant bit of a pixel indicator, which is a flag that indicates whether a pixel has been updated. The hidden message is encoded in the least significant bit (LSB) of specific image pixels. These pixels are chosen based on their RGB values, and the message is embedded by changing the value of the least significant bit.
@@ -341,9 +344,10 @@ The Pixel Indicator Technique is a steganography technique used to conceal secre
 \item If too many pixels are modified, image quality may suffer.
 \end{itemize}
 \vskip3em
-\subsection{Conclusion}
+\begin{center}
+\section{Conclusion}
 \textbf{Despite its limitations, the Pixel Indicator Technique remains a popular and effective method of steganography due to its ease of use, high capacity, and resistance to attacks. It is important to note, however, that the success of this technique is heavily dependent on the indicator matrix chosen, and it may not be appropriate for all types of cover images.}
-
+\end{center}
 \section{BPCS (Bit-Plane Complexity Segmentation)}
 The Bit-Plane Complexity Segmentation is a type of steganography in which a secret message is embedded in an image's complex bit planes. The complex bit planes are chosen for their randomness and complexity, making detection of the embedded message difficult.
 \vskip2em
@@ -392,9 +396,11 @@ The receiver must first identify the complex bit-planes and block locations in o
 \item Attacks that target the precise bit planes utilised for embedding are possible.
 \item The process is more difficult to implement and employ than other steganography techniques.
 \end{itemize}
+\begin{center}
+\section{Conclusion}
+\textbf{In conclusion, the Bit-Plane Complexity Segmentation technique has been demonstrated to be a reliable and secure steganography method with high capacity and resistance to attacks. However, the requirement for large cover images and longer embedding times may limit its use. It is also worth noting that the technique's success is dependent on the right selection of threshold values, which can affect the visual quality of the stego image.}    
+\end{center}
 
-\subsection{Conclusion}
-\textbf{In conclusion, the Bit-Plane Complexity Segmentation technique has been demonstrated to be a reliable and secure steganography method with high capacity and resistance to attacks. However, the requirement for large cover images and longer embedding times may limit its use. It is also worth noting that the technique's success is dependent on the right selection of threshold values, which can affect the visual quality of the stego image.}
 
 \section{LSB (Least Significant Bit)}
 In LSB (Least Significant Bit) steganography, the secret message bit is substituted for the least significant bit of each pixel value in the cover image. It is a preferred option for hiding hidden messages since the changes are frequently modest and hard to notice visually.
@@ -463,10 +469,10 @@ In LSB (Least Significant Bit) steganography, the secret message bit is substitu
 \item It is also susceptible to attacks that change the cover image's LSBs, which might lead to the concealed message being lost or being shown to unauthorized people.
 \item Because LSB steganography is not very reliable, even minor changes to the cover image can result in the hidden message being lost or altered.
 \end{itemize}
-
-\subsection{Conclusion}
+\begin{center}
+\section{Conclusion}
 \textbf{Finally, LSB steganography is a frequently used and simple technique for concealing data within digital photographs. It has various advantages, including high embedding capacity and message imperceptibility. However, it has several limitations, including vulnerability to attacks, image quality degradation, and the inability to embed large messages.}
-
+\end{center}
 \section{PVD (Pixel-Value Differencing)}
 The hidden message is concealed using the PVD (Pixel-Value Differencing) steganography method by using the difference between adjacent pixel values in the cover picture. Compared to LSB steganography, PVD steganography is more durable and more resistant to statistical analysis-based assaults.
 \vskip2em
@@ -540,10 +546,11 @@ The hidden message is concealed using the PVD (Pixel-Value Differencing) stegano
 \item Because LSB steganography is not very reliable, even minor changes to the cover image can result in the hidden message being lost or altered.
 \end{itemize}
 \vskip3em
+\begin{center}
 \subsection{Conclusion}
 \textbf{Finally, PVD steganography is a more advanced technique that seeks to overcome the limitations of LSB. It improves security, imperceptibility, and resistance to attacks. It does, however, have limits, such as a reduced embedding capacity and the complexity of the encoding and decoding operations.
 .}
-
+\end{center}
 \chapter{Critique of  existing solutions}
 
 \section{ SSIS Criticism }
@@ -619,10 +626,11 @@ The system should be scalable and capable of handling a high volume of cover pho
 \vskip1em
 \subsection{User-friendliness}
 The system should be simple to operate and come with detailed instructions.
-
+\begin{center}
 \section{Key Takeaways}
 \textbf{In conclusion, The SSIS system should provide a dependable and secure means of inserting hidden messages into cover images while maintaining confidentiality and authenticity.}
 
+\end{center}
 \chapter{SSIS High-Level Design}
 \section{Architecture overview}
 The SSIS system consists of five main components: Cover image selection and processing, Secret message encoding and encryption, Embedding algorithm and SSIS application, Extraction algorithm and SSIS application, and Decryption and decoding of the secret message.
@@ -649,10 +657,11 @@ To allow users to quickly extract messages from stego-images, the SSIS programme
 \section{Decryption and decoding of the secret message}
 The SSIS system's last component is in charge of decrypting and decoding the secret message derived from the stego-image. It decrypts the encrypted message using a secure decryption technique to get the original secret message.
 The SSIS programme must have an easy-to-use interface that allows users to simply decrypt and decode the secret message. The user can commence the decryption and decoding process by selecting an encrypted message, and the programme will provide feedback on the operation's progress.
-
+\begin{center}
 \section{Key takeaways}
 \textbf{The SSIS system architecture is flexible and scalable, ensuring quick secret message embedding and extraction. Its five components ensure confidentiality and authenticity by embedding hidden messages into cover images in a safe and secure manner. The system's components work in tandem to provide users with an easy-to-use and efficient solution for secret message communication. The system satisfies both functional and non-functional requirements, including performance, security, scalability, and usability.}
 
+\end{center}
 
 \chapter{Exchanged Messages and Data}
 \section{Input data}
@@ -672,9 +681,10 @@ First, the cover image is chosen and processed to guarantee it is steganographic
 
 The stego-image is then put through the extraction algorithm, which extracts the secret message without modifying the cover image. Finally, the encrypted message is decoded using a secure decryption technique to yield the decrypted message.
 \vskip4em
+\begin{center}
 \section{Key takeaways}
 \textbf{The SSIS system protects the security and confidentiality of data and messages exchanged between its components. The system can effectively embed, extract, and decode the secret message while retaining the integrity of the cover image by following the message/data flow between components.}
-
+\end{center}
 \chapter{Implementation details}
 \vskip3em
 \section{Programming language and libraries used}
@@ -696,6 +706,137 @@ Pillow, a fork of the Python Imaging Library (PIL) that may be used for image pr
 \section{Limitations and challenges}
 The size of the secret message that can be placed in the cover image is restricted by the size of the cover image, which is one constraint of SSIS. Furthermore, if the cover image is compressed or altered, the encoded message may become corrupted or lost. Another issue is keeping the encoded message hidden from unauthorised users, as even minor alterations to the stego-image can reveal it.
 \vskip3em
+\begin{center}
 \section{Key Takeaways}
 \textbf{SSIS can be implemented using a variety of programming languages and libraries, and it consists of numerous processes, including cover picture selection and processing, secret message encoding and encryption, embedding and extraction methods, and secret message decryption and decoding. When using SSIS, there are some restrictions and problems to consider.
 SSIS offers a dependable and safe solution for inserting secret messages into cover images while maintaining secrecy and authenticity. The system is made up of multiple components that collaborate to pick and process the cover image, encode and encrypt the secret message, embed the message in the cover image, extract the message from the stego-image, and decrypt and decode the secret message.}
+\end{center}
+\chapter{Tools And Development Phases}
+\section{Programming Language}
+\begin{itemize}
+\item Python was chosen for implementing SSIS due to its simplicity, readability, and availability of relevant libraries.
+\item Python's easy-to-understand syntax and emphasis on code readability simplify the implementation of complex algorithms like SSIS.
+\end{itemize}
+
+\section{Development Environment}
+\begin{itemize}
+\item \textbf{Visual Studio Code (VS Code):} Lightweight code editor with Python support through extensions. Provides syntax highlighting, debugging, and Git integration. Customizable and widely used.
+
+\item \textbf{Jupyter Notebook:} Interactive computing environment for creating and sharing code, visualizations, and text. Ideal for data analysis and documentation. Supports multiple languages, including Python.
+\end{itemize}
+\vskip 5em
+\section{Libraries and Frameworks}
+\begin{itemize}
+\item \textbf{OpenCV:\cite{frwiki:197436603}} OpenCV is an open-source computer vision library that provides a variety of functions for image processing tasks. It can be used in SSIS to manipulate, filter, and analyze images.
+
+
+\item \textbf{NumPy:\cite{frwiki:194233819}} NumPy is a popular Python library for scientific computing that provides a wide range of tools for working with arrays and matrices. It can be used for a variety of image processing tasks in SSIS.
+
+
+\item \textbf{Cryptography Libraries:} Used for encryption and decryption operations in SSIS.
+
+
+\item \textbf{Pillow:\cite{pillow}} Pillow is a user-friendly library for image processing. It can be used alongside OpenCV for image handling and transformation in SSIS.
+
+
+\item \textbf{Scikit-learn:\cite{scikit-learn}} Scikit-learn is a comprehensive machine learning library.It can provide advanced feature extraction and data analysis techniques to enhance the performance of the SSIS algorithm.
+
+
+\item \textbf{Other libraries:} Depending on specific requirements, additional libraries can be explored for tasks such as image manipulation, noise generation, and matrix operations in SSIS.
+\end{itemize}
+
+\begin{center}
+\textbf{These libraries and frameworks offer a range of functionalities and tools to support different stages of the SSIS implementation.}
+\end{center}
+
+\section{Additional Software or Hardware Tools}
+\begin{enumerate}
+    \item \textbf{Hardware Tool:}
+    \begin{itemize}
+        \item GPUs for accelerating image processing tasks or specialized image capture devices for higher-quality cover images.
+    \end{itemize}
+    \item \textbf{Software Tool:}
+    \begin{itemize}
+        \item \textbf{Git:}As version control system for code management.
+        \item \textbf{GitHub:}As a collaboration platform  for team coordination, and project management.
+    \end{itemize}
+\end{enumerate}
+    
+
+\section{Development Phases}
+\subsection{Functions}
+ \vskip2em
+\begin{enumerate}
+    \item \textbf{Function 1: Key Validation}
+    \begin{itemize}
+        \item This function will check the format and validity of a given key.
+        \item It will take a key as input.
+        \item The function will verify if the key meets the required format criteria.
+        \item If the key is invalid, the program will terminate.
+    \end{itemize}
+     \vskip2em
+    \item \textbf{Function 2: Matrix Interleaving}
+    \begin{itemize}
+        \item This function will perform the reorganization of a matrix based on a given key.
+        \item The function will iterate through each row of the matrix.
+        \item For each row, it will iterate through the elements of the key
+        \item The value from the source matrix corresponding to the key element will be assigned to the destination matrix.
+    \end{itemize}
+    \vskip2em
+    \item \textbf{Function 3: Noise Generation}
+    \begin{itemize}
+        \item This function will generate Additive White Gaussian Noise (AWGN) \cite{enwiki:1154048521} for a given image length.
+        \item It will take the image length as input.
+        \item The function will use appropriate libraries to generate a sequence of random numbers following a Gaussian distribution.
+        \item The sequence will be reshaped into a matrix format based on the image length.
+        \item The normalized noise matrix will be returned.
+    \end{itemize}
+    \vskip6em
+    \item \textbf{Function 4: Second Stage Noise Generation}
+    \begin{itemize}
+        \item This function will generate noise for the second stage of encryption.
+        \item It will take the image length as input.
+        \item The noise generation function will be called to obtain the AWGN noise matrix.
+        \item An empty matrix will be initialized to store the interleaved noise values.
+        \item The user will be prompted to input the second key for AWGN.
+        \item The matrix interleaving function will be called to reorganize the noise matrix using the key.
+        \item Finally, the AWGN noise matrix will be returned.
+    \end{itemize}
+    \item \textbf{Function 5: Image to Binary Matrix Conversion}
+    \begin{itemize}
+        \item This function will convert the red color channel of an image matrix into a binary matrix.
+        \item The function will iterate through the rows of the image matrix and extract the red color channel values.
+        \item The extracted values will be converted into binary representation and stored in the binary matrix.
+        \item The binary matrix will be returned.
+    \end{itemize}
+\end{enumerate}
+\newpage
+\subsection{Encoding Process}
+\textbf{The encoding process involves these steps:}
+\begin{enumerate}
+    \item Reading in the cover image using the OpenCV library and converting the red color channel of each pixel into a binary representation.
+    \item Generating a noise signal matrix using a pseudorandom number generator.
+    \item Embedding the binary message into the cover image by multiplying the binary representation of each pixel with the corresponding value from the noise signal matrix.
+    \item Interleaving the pixels of the cover image using a secret key.
+    \item Embedding the interleaved pixels into the LSBs (Least Significant Bits) of the blue color channel of the cover image, utilizing another secret key.
+\end{enumerate}
+
+\subsection{Decoding Process}
+\textbf{The decoding process involves  these  steps: \textcolor{red}{(Reversing Encoding Steps)}}
+\begin{enumerate}
+    \item Reading in the stego image using the OpenCV library and extracting the binary representation of the blue color channel of each pixel.
+    \item Reconstructing the interleaved pixels using the secret key.
+    \item Recovering the noise signal matrix using the pseudorandom number generator.
+    \item Dividing the binary representation of each pixel by the corresponding value from the noise signal matrix to restore the original binary representation.
+    \item Extracting the binary message from the LSBs of the blue color channel using the secret key.
+\end{enumerate}
+
+\newpage
+\vskip3em
+\section{Summary}
+\vskip3em
+\begin{figure}[ht!]
+\centering
+\frame{\includegraphics[width=37.5em, height=130mm]{figures/Summary.png}}
+\caption{Tools Used}
+\end{figure}
