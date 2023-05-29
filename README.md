@@ -1,4 +1,4 @@
-# Steganography Report Readme
+# CryptoCanvas Report Readme
 
 This repository contains a report on Steganography, a technique used to hide secret messages within images.
 
